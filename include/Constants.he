@@ -1,0 +1,269 @@
+// The MIT License (MIT)
+
+// Copyright (c) 2014 Arts Management Systems Ltd.
+
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+
+// Omnis includes
+#include <extcomp.he>
+
+// STL includes
+#include <map>
+#include <iostream>
+
+//LibiCal includes
+#include <libical/ical.h>
+
+#ifndef CONSTANTS_HE
+#define CONSTANTS_HE
+
+/* DEV NOTE
+ *
+ * Possible other iCal structs to implement constants for:
+ * icalparser_state
+ * icalerrorenum
+ * icalerrorstate
+ * icalrestriction_kind
+ */
+
+namespace LibiCalConstants {
+    
+    template<class T>
+    void getLookup(std::map<int, T>& lookup, T& def, int& start, int& offset) { /* Do nothing by default */ assert(2==1); }
+    
+    template<class T>
+    class ConstantLookup {
+    public:
+        // Constructor / Destructor
+        ConstantLookup() { }
+        
+        // Get first constant resource #
+        int first() { 
+            buildConstantLookup(); 
+            return firstConst; 
+        }
+        
+        // Get last constant resource #
+        int last() { 
+            buildConstantLookup(); 
+            return lastConst; 
+        }
+        
+        // Get constant id from Omnis Constant
+        qlong constID(int omnisConstant) { 
+            buildConstantLookup(); 
+            return firstConst+omnisConstant-offsetConst; 
+        }
+        
+        // Determine if an Omnis constant is valid
+        bool isValid(int omnisConstant) { 
+            buildConstantLookup();
+            
+            typename std::map<int,T>::iterator it = constants.find(omnisConstant);
+            if (it != constants.end())
+                return true;
+            else
+                return false;
+        }
+        
+        // Get C++ enum constant
+        T get(int omnisConstant) {
+            buildConstantLookup();
+            
+            typename std::map<int,T>::iterator it = constants.find(omnisConstant);
+            if (it == constants.end())
+                return defConstant;
+            else
+                return it->second;
+        }
+        
+        // Get Omnis constant
+        int getOmnis(T constant) {
+            buildConstantLookup();
+            
+            typename std::map<T,int>::iterator it = omnisConstants.find(constant);
+            if (it == omnisConstants.end())
+                return 0;
+            else
+                return it->second;
+        }
+        
+        // Build constant lookup
+        void buildConstantLookup() {
+            if (constants.size() > 0) {
+                return;
+            }
+            
+            getLookup<T>(constants, defConstant, firstConst, offsetConst);
+            
+            lastConst = firstConst + (constants.size() - 1); // Assign last resource position
+            
+            typename std::map<int, T>::iterator it;
+            for ( it=constants.begin() ; it != constants.end(); it++ ) {
+                omnisConstants[(*it).second] = (*it).first;
+            }
+        }
+    private:
+        static std::map<int, T> constants;
+        static std::map<T, int> omnisConstants;
+        
+        static int firstConst;
+        static int lastConst;
+        static int offsetConst; 
+        static T defConstant;
+    };
+    
+    // Init static variables
+    template <class T> std::map<int, T> ConstantLookup<T>::constants;
+    template <class T> std::map<T, int> ConstantLookup<T>::omnisConstants;
+    template <class T> int ConstantLookup<T>::firstConst = 0;
+    template <class T> int ConstantLookup<T>::lastConst = 0;
+    template <class T> int ConstantLookup<T>::offsetConst = 1;
+    template <class T> T ConstantLookup<T>::defConstant;
+    
+    // Component Type (Kind)
+    template<>
+    void getLookup<icalcomponent_kind>(std::map<int, icalcomponent_kind>& lookup, icalcomponent_kind& def, int& start, int& offset);
+    
+    // Property Type (Kind)
+    template<>
+    void getLookup<icalproperty_kind>(std::map<int, icalproperty_kind>& lookup, icalproperty_kind& def, int& start, int& offset);
+    
+    // Property Value
+    //    Action
+    template<>
+    void getLookup<icalproperty_action>(std::map<int, icalproperty_action>& lookup, icalproperty_action& def, int& start, int& offset);
+    
+    //    Car Level
+    template<>
+    void getLookup<icalproperty_carlevel>(std::map<int, icalproperty_carlevel>& lookup, icalproperty_carlevel& def, int& start, int& offset);
+   
+    //    Class
+    template<>
+    void getLookup<icalproperty_class>(std::map<int, icalproperty_class>& lookup, icalproperty_class& def, int& start, int& offset);
+
+    //    Cmd
+    template<>
+    void getLookup<icalproperty_cmd>(std::map<int, icalproperty_cmd>& lookup, icalproperty_cmd& def, int& start, int& offset);
+    
+    //    Method
+    template<>
+    void getLookup<icalproperty_method>(std::map<int, icalproperty_method>& lookup, icalproperty_method& def, int& start, int& offset);
+    
+    //    Query Level
+    template<>
+    void getLookup<icalproperty_querylevel>(std::map<int, icalproperty_querylevel>& lookup, icalproperty_querylevel& def, int& start, int& offset);
+    
+    //    Status
+    template<>
+    void getLookup<icalproperty_status>(std::map<int, icalproperty_status>& lookup, icalproperty_status& def, int& start, int& offset);
+    
+    //    Transp
+    template<>
+    void getLookup<icalproperty_transp>(std::map<int, icalproperty_transp>& lookup, icalproperty_transp& def, int& start, int& offset);
+    
+    //    XLIC Class
+    template<>
+    void getLookup<icalproperty_xlicclass>(std::map<int, icalproperty_xlicclass>& lookup, icalproperty_xlicclass& def, int& start, int& offset);
+    
+    // Parameter Type (Kind)
+    template<>
+    void getLookup<icalparameter_kind>(std::map<int, icalparameter_kind>& lookup, icalparameter_kind& def, int& start, int& offset);
+    
+    // Parameter Value
+    //   Action
+    template<>
+    void getLookup<icalparameter_action>(std::map<int, icalparameter_action>& lookup, icalparameter_action& def, int& start, int& offset);
+    
+    //   CU Type
+    template<>
+    void getLookup<icalparameter_cutype>(std::map<int, icalparameter_cutype>& lookup, icalparameter_cutype& def, int& start, int& offset);
+    
+    //   Enable
+    template<>
+    void getLookup<icalparameter_enable>(std::map<int, icalparameter_enable>& lookup, icalparameter_enable& def, int& start, int& offset);
+    
+    //   Encoding
+    template<>
+    void getLookup<icalparameter_encoding>(std::map<int, icalparameter_encoding>& lookup, icalparameter_encoding& def, int& start, int& offset);
+    
+    //   FB Type
+    template<>
+    void getLookup<icalparameter_fbtype>(std::map<int, icalparameter_fbtype>& lookup, icalparameter_fbtype& def, int& start, int& offset);
+    
+    //   Local
+    template<>
+    void getLookup<icalparameter_local>(std::map<int, icalparameter_local>& lookup, icalparameter_local& def, int& start, int& offset);
+    
+    //   PartStat
+    template<>
+    void getLookup<icalparameter_partstat>(std::map<int, icalparameter_partstat>& lookup, icalparameter_partstat& def, int& start, int& offset);
+    
+    //   Range
+    template<>
+    void getLookup<icalparameter_range>(std::map<int, icalparameter_range>& lookup, icalparameter_range& def, int& start, int& offset);
+    
+    //   Related
+    template<>
+    void getLookup<icalparameter_related>(std::map<int, icalparameter_related>& lookup, icalparameter_related& def, int& start, int& offset);
+    
+    //   RelType
+    template<>
+    void getLookup<icalparameter_reltype>(std::map<int, icalparameter_reltype>& lookup, icalparameter_reltype& def, int& start, int& offset);
+    
+    //   Role
+    template<>
+    void getLookup<icalparameter_role>(std::map<int, icalparameter_role>& lookup, icalparameter_role& def, int& start, int& offset);
+    
+    //   RSVP
+    template<>
+    void getLookup<icalparameter_rsvp>(std::map<int, icalparameter_rsvp>& lookup, icalparameter_rsvp& def, int& start, int& offset);
+    
+    //   Value
+    template<>
+    void getLookup<icalparameter_value>(std::map<int, icalparameter_value>& lookup, icalparameter_value& def, int& start, int& offset);
+    
+    //   XLIC Compare Type
+    template<>
+    void getLookup<icalparameter_xliccomparetype>(std::map<int, icalparameter_xliccomparetype>& lookup, icalparameter_xliccomparetype& def, int& start, int& offset);
+    
+    //   XLIC Error Type
+    template<>
+    void getLookup<icalparameter_xlicerrortype>(std::map<int, icalparameter_xlicerrortype>& lookup, icalparameter_xlicerrortype& def, int& start, int& offset);
+    
+    // Value Type (Kind)
+    template<>
+    void getLookup<icalvalue_kind>(std::map<int, icalvalue_kind>& lookup, icalvalue_kind& def, int& start, int& offset);
+    
+    // Request Status
+    template<>
+    void getLookup<icalrequeststatus>(std::map<int, icalrequeststatus>& lookup, icalrequeststatus& def, int& start, int& offset);
+    
+    // Recurrence Type
+    //    Frequency
+    template<>
+    void getLookup<icalrecurrencetype_frequency>(std::map<int, icalrecurrencetype_frequency>& lookup, icalrecurrencetype_frequency& def, int& start, int& offset);
+    
+    //    Weekday
+    template<>
+    void getLookup<icalrecurrencetype_weekday>(std::map<int, icalrecurrencetype_weekday>& lookup, icalrecurrencetype_weekday& def, int& start, int& offset);
+}
+
+#endif /* CONSTANTS_HE */
+

@@ -1,0 +1,4 @@
+LIBRARY         libical
+EXPORTS
+    NVObjWndProc  @1
+ 

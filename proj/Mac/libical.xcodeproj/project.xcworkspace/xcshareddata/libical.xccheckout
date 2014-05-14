@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0F2ECE92-C6D3-4B20-ACFE-266613011CDF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>libical</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B6ED2F72-6BF6-4D43-AFAD-EAB689F3E043</key>
+		<string>https://www2.artsman.com/libical.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>proj/Mac/libical.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B6ED2F72-6BF6-4D43-AFAD-EAB689F3E043</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://www2.artsman.com/libical.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B6ED2F72-6BF6-4D43-AFAD-EAB689F3E043</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B6ED2F72-6BF6-4D43-AFAD-EAB689F3E043</string>
+			<key>IDESourceControlWCCName</key>
+			<string>libical</string>
+		</dict>
+	</array>
+</dict>
+</plist>

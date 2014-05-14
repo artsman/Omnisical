@@ -1,0 +1,118 @@
+Notes for Building libical
+
+-----------------------
+MAC
+-----------------------
+
+- XCode 4: Note that for building PowerPC you must first make a symlink for /usr/bin/as to /Developer_XCode3/usr/bin/as (Saved as as.bakXCode3 for easy move).  Must also do the same for /Developer/usr/libexec/gcc/powerpc-apple-darwin10/4.2.1
+
+- Version 0.46 required calling ./bootstrap in the main directory before doing the ./configure, make, make install series.
+- Command for building a Universal version:
+    env CFLAGS="-O -g -arch i386 -arch ppc -mmacosx-version-min=10.4"   LDFLAGS="-arch i386 -arch ppc -isysroot /Developer/SDKs/MacOSX10.5.sdk" ./configure --prefix=/Externals/libical/ --disable-dependency-tracking
+
+- Change icaltimezone.c icaltimezone_load_builtin_timzone
+
+----START CODE CHANGE
+-----From:
+	    /* If the location isn't set, it isn't a builtin timezone. */
+    if (!zone->location || !zone->location[0])
+	return;
+    
+#ifdef HAVE_PTHREAD
+
+-----To:
+
+	    /* If the location isn't set, it isn't a builtin timezone. */
+    if (!zone->location || !zone->location[0])
+	return;
+    
+    if (zone->component)
+       return;
+    
+#ifdef HAVE_PTHREAD
+
+----END CODE CHANGE
+
+-----------------------
+WINDOWS
+-----------------------
+
+- Use CMake - http://www.cmake.org/cmake/resources/software.html
+- Add text below to the main CMakeLists.txt  -- Ref: http://sourceforge.net/mailarchive/forum.php?thread_name=OF503BE681.089931B1-ON80257797.002DC7F4-80257797.002E679E%40bnpparibas.com&forum_name=freeassociation-libical
+    add_definitions(-DWIN32 -DNOMINMAX -D_SECURE_SCL_THROWS=1 -D_SECURE_SCL=1 -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -D_MBCS -D_VC90_UPGRADE=0x0600)
+- Modify vsnprintf.h to add -- #if !defined(_MSC_VER) -- after the call to #include <stdarg.h>
+- Modify vsnprintf.h to add -- #endif -- after the the snprintf decl at the end.
+- Modify ical.def to remove all references to -- simple_str_to_float
+- Modify ical.def to add a reference for -- icaltimezone_set_tzid_prefix
+- Add USE_BUILTIN_TZDATA to pre-processor flags for ical-static project  (Note: Do BOTH Debug and Release)
+- In icaltimezone.c modify static void icaltimezone_parse_zone_tab(void) 
+    Change is to add const char* zone_dir and then to modify the first #ifndef USE_BUILTIN_TZDATA ... #endif if block.
+- Ensure struct byte-alignment (Under Code Generation) is identical; 2-bytes at time of writing.  Errors were caused in the Recurrence object if this was not the case.
+
+----START CODE CHANGE
+
+----From:
+   
+static void
+icaltimezone_parse_zone_tab		(void)
+{
+    char *filename;
+    FILE *fp;
+    char buf[1024];  /* Used to store each line of zones.tab as it is read. */
+    char location[1024]; /* Stores the city name when parsing buf. */
+    unsigned int filename_len;
+    int latitude_degrees = 0, latitude_minutes = 0, latitude_seconds = 0;
+    int longitude_degrees = 0, longitude_minutes = 0, longitude_seconds = 0;
+    icaltimezone zone;
+
+    icalerror_assert (builtin_timezones == NULL,
+		      "Parsing zones.tab file multiple times");
+
+    builtin_timezones = icalarray_new (sizeof (icaltimezone), 32);
+
+#ifndef USE_BUILTIN_TZDATA
+    filename_len = strlen ((char *) icaltzutil_get_zone_directory()) + strlen (ZONES_TAB_SYSTEM_FILENAME)
+	+ 2;
+#else    
+    filename_len = strlen (get_zone_directory()) + strlen (ZONES_TAB_FILENAME)
+	+ 2;
+#endif    
+
+   
+----To:
+
+static void
+icaltimezone_parse_zone_tab		(void)
+{
+    char *filename;
+    FILE *fp;
+    char buf[1024];  /* Used to store each line of zones.tab as it is read. */
+    char location[1024]; /* Stores the city name when parsing buf. */
+    unsigned int filename_len;
+    int latitude_degrees = 0, latitude_minutes = 0, latitude_seconds = 0;
+    int longitude_degrees = 0, longitude_minutes = 0, longitude_seconds = 0;
+    icaltimezone zone;
+	const char* zone_dir;
+
+    icalerror_assert (builtin_timezones == NULL,
+		      "Parsing zones.tab file multiple times");
+
+    builtin_timezones = icalarray_new (sizeof (icaltimezone), 32);
+
+#ifndef USE_BUILTIN_TZDATA
+    zone_dir = icaltzutil_get_zone_directory();
+    if (zone_dir == NULL)
+    {
+        return;
+    }
+    filename_len = strlen((char *)zone_dir) + strlen(ZONES_TAB_SYSTEM_FILENAME) + 2;
+#else 
+    zone_dir = get_zone_directory();
+    if (zone_dir == NULL)
+    {
+        return;
+    }
+    filename_len = strlen(zone_dir) + strlen (ZONES_TAB_FILENAME) + 2;
+#endif 
+
+----END CODE CHANGE

@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		96D355F20908DD62006B6436 /* ReleaseBuild */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 96D355F30908DD80006B6436 /* Build configuration list for PBXAggregateTarget "ReleaseBuild" */;
+			buildPhases = (
+			);
+			dependencies = (
+				9658838409BC64BB0063770F /* PBXTargetDependency */,
+			);
+			name = ReleaseBuild;
+			productName = ReleaseBuild;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		96CA4E550907E8CC00C234AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		96CA4E5A0907E8CC00C234AA /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */; };
+		96CA4E660907EB0700C234AA /* u_complib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CA4E650907EB0700C234AA /* u_complib.framework */; };
+		B009C302134A273300C6C5FD /* libical.rc in Resources */ = {isa = PBXBuildFile; fileRef = B0E82D2713461C3A001F77A5 /* libical.rc */; };
+		B0145151135C865400A79E93 /* Attach.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0145146135C865400A79E93 /* Attach.cpp */; };
+		B0145152135C865400A79E93 /* Date.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0145147135C865400A79E93 /* Date.cpp */; };
+		B0145153135C865400A79E93 /* DateTimePeriod.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0145148135C865400A79E93 /* DateTimePeriod.cpp */; };
+		B0145154135C865400A79E93 /* Duration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0145149135C865400A79E93 /* Duration.cpp */; };
+		B0145155135C865400A79E93 /* Geo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B014514A135C865400A79E93 /* Geo.cpp */; };
+		B0145156135C865400A79E93 /* Period.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B014514B135C865400A79E93 /* Period.cpp */; };
+		B0145157135C865400A79E93 /* Recurrence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B014514C135C865400A79E93 /* Recurrence.cpp */; };
+		B0145158135C865400A79E93 /* TimeSpan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B014514D135C865400A79E93 /* TimeSpan.cpp */; };
+		B0145159135C865400A79E93 /* TimeZone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B014514E135C865400A79E93 /* TimeZone.cpp */; };
+		B014515A135C865400A79E93 /* TimeZonePhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B014514F135C865400A79E93 /* TimeZonePhase.cpp */; };
+		B014515B135C865400A79E93 /* Trigger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0145150135C865400A79E93 /* Trigger.cpp */; };
+		B02360CC11765D30001236FE /* NVObjBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B02360C911765D30001236FE /* NVObjBase.cpp */; };
+		B0288DF41344BBF400C4B3EF /* libical.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0288DF31344BBF400C4B3EF /* libical.cpp */; };
+		B03C1D50130EDBCB00661BC0 /* Static.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B03C1D4F130EDBCB00661BC0 /* Static.cpp */; };
+		B0A46050125F550F003A3050 /* OmnisTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0A4604F125F550F003A3050 /* OmnisTools.cpp */; };
+		B0A7BBEE134F383F0054C250 /* iCalTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0A7BBED134F383F0054C250 /* iCalTools.cpp */; };
+		B0CC327F1344DD56005A0878 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0CC327B1344DD56005A0878 /* Component.cpp */; };
+		B0CC32801344DD56005A0878 /* Parameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0CC327C1344DD56005A0878 /* Parameter.cpp */; };
+		B0CC32811344DD56005A0878 /* Property.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0CC327D1344DD56005A0878 /* Property.cpp */; };
+		B0CC32821344DD56005A0878 /* Value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0CC327E1344DD56005A0878 /* Value.cpp */; };
+		B0E82D32134883B0001F77A5 /* Constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E82D31134883B0001F77A5 /* Constants.cpp */; };
+		B0F8CEBF137033C000415EF2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F8CEBE137033C000415EF2 /* Cocoa.framework */; };
+		B0F8CEC3137035CF00415EF2 /* libical.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F8CEC0137035CF00415EF2 /* libical.a */; };
+		B0F8CEC4137035CF00415EF2 /* libicalss.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F8CEC1137035CF00415EF2 /* libicalss.a */; };
+		B0F8CEC5137035CF00415EF2 /* libicalvcal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F8CEC2137035CF00415EF2 /* libicalvcal.a */; };
+		B0F8CECC1370364C00415EF2 /* SystemDate.mm in Sources */ = {isa = PBXBuildFile; fileRef = B0F8CECB1370364C00415EF2 /* SystemDate.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		96CA4E5C0907E8CC00C234AA /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.rc";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"$(TEMP_FILE_DIR)/omnisrc/Localizable.strings",
+			);
+			script = "/Developer/Tools/omnisrc.app/Contents/MacOS/omnisrc INPUT_FILE_PATH TEMP_FILE_DIR REZ_SEARCH_PATHS XCOMP\ncp $TEMP_FILE_DIR/omnisrc/xcomp.rsrc $INSTALL_DIR/$CONTENTS_FOLDER_PATH/Resources";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXContainerItemProxy section */
+		9658838309BC64BB0063770F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96CA4E530907E8CC00C234AA;
+			remoteInfo = UnicodeCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		96CA4E610907E8CC00C234AA /* libical.u_xcomp */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libical.u_xcomp; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CA4E650907EB0700C234AA /* u_complib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = u_complib.framework; path = /Library/Frameworks/u_complib.framework; sourceTree = "<absolute>"; };
+		B014512F135C85C300A79E93 /* Attach.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Attach.he; path = ../../include/Attach.he; sourceTree = "<group>"; };
+		B0145130135C85C300A79E93 /* Date.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Date.he; path = ../../include/Date.he; sourceTree = "<group>"; };
+		B0145131135C85C300A79E93 /* DateTimePeriod.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = DateTimePeriod.he; path = ../../include/DateTimePeriod.he; sourceTree = "<group>"; };
+		B0145132135C85C300A79E93 /* Duration.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Duration.he; path = ../../include/Duration.he; sourceTree = "<group>"; };
+		B0145133135C85C300A79E93 /* Geo.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Geo.he; path = ../../include/Geo.he; sourceTree = "<group>"; };
+		B0145134135C85C300A79E93 /* Period.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Period.he; path = ../../include/Period.he; sourceTree = "<group>"; };
+		B0145135135C85C300A79E93 /* Recurrence.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Recurrence.he; path = ../../include/Recurrence.he; sourceTree = "<group>"; };
+		B0145136135C85C300A79E93 /* TimeSpan.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = TimeSpan.he; path = ../../include/TimeSpan.he; sourceTree = "<group>"; };
+		B0145137135C85C300A79E93 /* TimeZone.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = TimeZone.he; path = ../../include/TimeZone.he; sourceTree = "<group>"; };
+		B0145138135C85C300A79E93 /* TimeZonePhase.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = TimeZonePhase.he; path = ../../include/TimeZonePhase.he; sourceTree = "<group>"; };
+		B0145139135C85C300A79E93 /* Trigger.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Trigger.he; path = ../../include/Trigger.he; sourceTree = "<group>"; };
+		B0145146135C865400A79E93 /* Attach.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Attach.cpp; path = ../../src/Attach.cpp; sourceTree = "<group>"; };
+		B0145147135C865400A79E93 /* Date.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Date.cpp; path = ../../src/Date.cpp; sourceTree = "<group>"; };
+		B0145148135C865400A79E93 /* DateTimePeriod.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DateTimePeriod.cpp; path = ../../src/DateTimePeriod.cpp; sourceTree = "<group>"; };
+		B0145149135C865400A79E93 /* Duration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Duration.cpp; path = ../../src/Duration.cpp; sourceTree = "<group>"; };
+		B014514A135C865400A79E93 /* Geo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Geo.cpp; path = ../../src/Geo.cpp; sourceTree = "<group>"; };
+		B014514B135C865400A79E93 /* Period.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Period.cpp; path = ../../src/Period.cpp; sourceTree = "<group>"; };
+		B014514C135C865400A79E93 /* Recurrence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Recurrence.cpp; path = ../../src/Recurrence.cpp; sourceTree = "<group>"; };
+		B014514D135C865400A79E93 /* TimeSpan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TimeSpan.cpp; path = ../../src/TimeSpan.cpp; sourceTree = "<group>"; };
+		B014514E135C865400A79E93 /* TimeZone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TimeZone.cpp; path = ../../src/TimeZone.cpp; sourceTree = "<group>"; };
+		B014514F135C865400A79E93 /* TimeZonePhase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TimeZonePhase.cpp; path = ../../src/TimeZonePhase.cpp; sourceTree = "<group>"; };
+		B0145150135C865400A79E93 /* Trigger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Trigger.cpp; path = ../../src/Trigger.cpp; sourceTree = "<group>"; };
+		B02360C911765D30001236FE /* NVObjBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NVObjBase.cpp; path = ../../src/NVObjBase.cpp; sourceTree = SOURCE_ROOT; };
+		B02360CF11765D3A001236FE /* NVObjBase.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = NVObjBase.he; path = ../../include/NVObjBase.he; sourceTree = SOURCE_ROOT; };
+		B0288DF11344BBEA00C4B3EF /* libical.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = libical.he; path = ../../include/libical.he; sourceTree = "<group>"; };
+		B0288DF31344BBF400C4B3EF /* libical.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libical.cpp; path = ../../src/libical.cpp; sourceTree = "<group>"; };
+		B03C1D40130EDAE500661BC0 /* Static.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Static.he; path = ../../include/Static.he; sourceTree = SOURCE_ROOT; };
+		B03C1D4F130EDBCB00661BC0 /* Static.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Static.cpp; path = ../../src/Static.cpp; sourceTree = SOURCE_ROOT; };
+		B0A4604F125F550F003A3050 /* OmnisTools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OmnisTools.cpp; path = ../../src/OmnisTools.cpp; sourceTree = SOURCE_ROOT; };
+		B0A46051125F5517003A3050 /* OmnisTools.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = OmnisTools.he; path = ../../include/OmnisTools.he; sourceTree = SOURCE_ROOT; };
+		B0A7BBEA134F382B0054C250 /* iCalTools.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = iCalTools.he; path = ../../include/iCalTools.he; sourceTree = "<group>"; };
+		B0A7BBED134F383F0054C250 /* iCalTools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = iCalTools.cpp; path = ../../src/iCalTools.cpp; sourceTree = "<group>"; };
+		B0C53F5D13619B620096C4DD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0CC32731344DD1A005A0878 /* Component.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Component.he; path = ../../include/Component.he; sourceTree = "<group>"; };
+		B0CC32741344DD1A005A0878 /* Parameter.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Parameter.he; path = ../../include/Parameter.he; sourceTree = "<group>"; };
+		B0CC32751344DD1A005A0878 /* Property.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Property.he; path = ../../include/Property.he; sourceTree = "<group>"; };
+		B0CC32761344DD1A005A0878 /* Value.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Value.he; path = ../../include/Value.he; sourceTree = "<group>"; };
+		B0CC327B1344DD56005A0878 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Component.cpp; path = ../../src/Component.cpp; sourceTree = "<group>"; };
+		B0CC327C1344DD56005A0878 /* Parameter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Parameter.cpp; path = ../../src/Parameter.cpp; sourceTree = "<group>"; };
+		B0CC327D1344DD56005A0878 /* Property.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Property.cpp; path = ../../src/Property.cpp; sourceTree = "<group>"; };
+		B0CC327E1344DD56005A0878 /* Value.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Value.cpp; path = ../../src/Value.cpp; sourceTree = "<group>"; };
+		B0D03B921370450900AB77B7 /* SystemDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemDate.h; path = ../../platform/SystemDate.h; sourceTree = "<group>"; };
+		B0E82D2713461C3A001F77A5 /* libical.rc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = libical.rc; path = ../../resource/libical.rc; sourceTree = "<group>"; };
+		B0E82D31134883B0001F77A5 /* Constants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Constants.cpp; path = ../../src/Constants.cpp; sourceTree = "<group>"; };
+		B0E82D33134883BA001F77A5 /* Constants.he */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = Constants.he; path = ../../include/Constants.he; sourceTree = "<group>"; };
+		B0E82D3513488408001F77A5 /* ical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ical.h; path = ../../include/libical/ical.h; sourceTree = "<group>"; };
+		B0E82D3613488408001F77A5 /* icalarray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalarray.h; path = ../../include/libical/icalarray.h; sourceTree = "<group>"; };
+		B0E82D3713488408001F77A5 /* icalattach.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalattach.h; path = ../../include/libical/icalattach.h; sourceTree = "<group>"; };
+		B0E82D3813488408001F77A5 /* icalcalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalcalendar.h; path = ../../include/libical/icalcalendar.h; sourceTree = "<group>"; };
+		B0E82D3913488408001F77A5 /* icalclassify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalclassify.h; path = ../../include/libical/icalclassify.h; sourceTree = "<group>"; };
+		B0E82D3A13488408001F77A5 /* icalcluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalcluster.h; path = ../../include/libical/icalcluster.h; sourceTree = "<group>"; };
+		B0E82D3B13488408001F77A5 /* icalcomponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalcomponent.h; path = ../../include/libical/icalcomponent.h; sourceTree = "<group>"; };
+		B0E82D3C13488408001F77A5 /* icalderivedparameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalderivedparameter.h; path = ../../include/libical/icalderivedparameter.h; sourceTree = "<group>"; };
+		B0E82D3D13488408001F77A5 /* icalderivedproperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalderivedproperty.h; path = ../../include/libical/icalderivedproperty.h; sourceTree = "<group>"; };
+		B0E82D3E13488408001F77A5 /* icalderivedvalue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalderivedvalue.h; path = ../../include/libical/icalderivedvalue.h; sourceTree = "<group>"; };
+		B0E82D3F13488408001F77A5 /* icaldirset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icaldirset.h; path = ../../include/libical/icaldirset.h; sourceTree = "<group>"; };
+		B0E82D4013488408001F77A5 /* icaldirsetimpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icaldirsetimpl.h; path = ../../include/libical/icaldirsetimpl.h; sourceTree = "<group>"; };
+		B0E82D4113488408001F77A5 /* icalduration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalduration.h; path = ../../include/libical/icalduration.h; sourceTree = "<group>"; };
+		B0E82D4213488408001F77A5 /* icalenums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalenums.h; path = ../../include/libical/icalenums.h; sourceTree = "<group>"; };
+		B0E82D4313488408001F77A5 /* icalerror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalerror.h; path = ../../include/libical/icalerror.h; sourceTree = "<group>"; };
+		B0E82D4413488408001F77A5 /* icalfileset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalfileset.h; path = ../../include/libical/icalfileset.h; sourceTree = "<group>"; };
+		B0E82D4513488408001F77A5 /* icalfilesetimpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalfilesetimpl.h; path = ../../include/libical/icalfilesetimpl.h; sourceTree = "<group>"; };
+		B0E82D4613488408001F77A5 /* icalgauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalgauge.h; path = ../../include/libical/icalgauge.h; sourceTree = "<group>"; };
+		B0E82D4713488408001F77A5 /* icalgaugeimpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalgaugeimpl.h; path = ../../include/libical/icalgaugeimpl.h; sourceTree = "<group>"; };
+		B0E82D4813488408001F77A5 /* icallangbind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icallangbind.h; path = ../../include/libical/icallangbind.h; sourceTree = "<group>"; };
+		B0E82D4913488408001F77A5 /* icalmemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalmemory.h; path = ../../include/libical/icalmemory.h; sourceTree = "<group>"; };
+		B0E82D4A13488408001F77A5 /* icalmessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalmessage.h; path = ../../include/libical/icalmessage.h; sourceTree = "<group>"; };
+		B0E82D4B13488408001F77A5 /* icalmime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalmime.h; path = ../../include/libical/icalmime.h; sourceTree = "<group>"; };
+		B0E82D4C13488408001F77A5 /* icalparameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalparameter.h; path = ../../include/libical/icalparameter.h; sourceTree = "<group>"; };
+		B0E82D4D13488408001F77A5 /* icalparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalparser.h; path = ../../include/libical/icalparser.h; sourceTree = "<group>"; };
+		B0E82D4E13488408001F77A5 /* icalperiod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalperiod.h; path = ../../include/libical/icalperiod.h; sourceTree = "<group>"; };
+		B0E82D4F13488408001F77A5 /* icalproperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalproperty.h; path = ../../include/libical/icalproperty.h; sourceTree = "<group>"; };
+		B0E82D5013488408001F77A5 /* icalrecur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalrecur.h; path = ../../include/libical/icalrecur.h; sourceTree = "<group>"; };
+		B0E82D5113488408001F77A5 /* icalrestriction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalrestriction.h; path = ../../include/libical/icalrestriction.h; sourceTree = "<group>"; };
+		B0E82D5213488408001F77A5 /* icalset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalset.h; path = ../../include/libical/icalset.h; sourceTree = "<group>"; };
+		B0E82D5313488408001F77A5 /* icalspanlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalspanlist.h; path = ../../include/libical/icalspanlist.h; sourceTree = "<group>"; };
+		B0E82D5413488408001F77A5 /* icalss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalss.h; path = ../../include/libical/icalss.h; sourceTree = "<group>"; };
+		B0E82D5513488408001F77A5 /* icalssyacc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalssyacc.h; path = ../../include/libical/icalssyacc.h; sourceTree = "<group>"; };
+		B0E82D5613488408001F77A5 /* icaltime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icaltime.h; path = ../../include/libical/icaltime.h; sourceTree = "<group>"; };
+		B0E82D5713488408001F77A5 /* icaltimezone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icaltimezone.h; path = ../../include/libical/icaltimezone.h; sourceTree = "<group>"; };
+		B0E82D5813488408001F77A5 /* icaltypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icaltypes.h; path = ../../include/libical/icaltypes.h; sourceTree = "<group>"; };
+		B0E82D5913488408001F77A5 /* icaltz-util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "icaltz-util.h"; path = "../../include/libical/icaltz-util.h"; sourceTree = "<group>"; };
+		B0E82D5A13488408001F77A5 /* icalvalue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalvalue.h; path = ../../include/libical/icalvalue.h; sourceTree = "<group>"; };
+		B0E82D5B13488408001F77A5 /* icalvcal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icalvcal.h; path = ../../include/libical/icalvcal.h; sourceTree = "<group>"; };
+		B0E82D5C13488408001F77A5 /* port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = port.h; path = ../../include/libical/port.h; sourceTree = "<group>"; };
+		B0E82D5D13488408001F77A5 /* pvl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pvl.h; path = ../../include/libical/pvl.h; sourceTree = "<group>"; };
+		B0E82D5E13488408001F77A5 /* sspm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sspm.h; path = ../../include/libical/sspm.h; sourceTree = "<group>"; };
+		B0E82D5F13488408001F77A5 /* vcaltmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vcaltmp.h; path = ../../include/libical/vcaltmp.h; sourceTree = "<group>"; };
+		B0E82D6013488408001F77A5 /* vcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vcc.h; path = ../../include/libical/vcc.h; sourceTree = "<group>"; };
+		B0E82D6113488408001F77A5 /* vobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vobject.h; path = ../../include/libical/vobject.h; sourceTree = "<group>"; };
+		B0F8CEBE137033C000415EF2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B0F8CEC0137035CF00415EF2 /* libical.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libical.a; path = ../../lib/libical.a; sourceTree = "<group>"; };
+		B0F8CEC1137035CF00415EF2 /* libicalss.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libicalss.a; path = ../../lib/libicalss.a; sourceTree = "<group>"; };
+		B0F8CEC2137035CF00415EF2 /* libicalvcal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libicalvcal.a; path = ../../lib/libicalvcal.a; sourceTree = "<group>"; };
+		B0F8CECB1370364C00415EF2 /* SystemDate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SystemDate.mm; path = ../../platform/Mac/SystemDate.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96CA4E590907E8CC00C234AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0F8CEBF137033C000415EF2 /* Cocoa.framework in Frameworks */,
+				96CA4E5A0907E8CC00C234AA /* Carbon.framework in Frameworks */,
+				96CA4E660907EB0700C234AA /* u_complib.framework in Frameworks */,
+				B0F8CEC3137035CF00415EF2 /* libical.a in Frameworks */,
+				B0F8CEC4137035CF00415EF2 /* libicalss.a in Frameworks */,
+				B0F8CEC5137035CF00415EF2 /* libicalvcal.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* xrandom */ = {
+			isa = PBXGroup;
+			children = (
+				96D631340905093100E0F291 /* Headers */,
+				08FB77ADFE841716C02AAC07 /* Source */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
+				19C28FB4FE9D528D11CA2CBB /* Products */,
+			);
+			name = xrandom;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				B0F8CEC0137035CF00415EF2 /* libical.a */,
+				B0F8CEC1137035CF00415EF2 /* libicalss.a */,
+				B0F8CEC2137035CF00415EF2 /* libicalvcal.a */,
+				08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */,
+				96CA4E650907EB0700C234AA /* u_complib.framework */,
+				B0F8CEBE137033C000415EF2 /* Cocoa.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B0C53F5D13619B620096C4DD /* Info.plist */,
+				B0E82D2713461C3A001F77A5 /* libical.rc */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77ADFE841716C02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B0F8CEC6137035D900415EF2 /* Platform */,
+				B0CD06CB135C9D920094CBAF /* Types */,
+				B0288DF31344BBF400C4B3EF /* libical.cpp */,
+				B0A4604F125F550F003A3050 /* OmnisTools.cpp */,
+				B0A7BBED134F383F0054C250 /* iCalTools.cpp */,
+				B02360C911765D30001236FE /* NVObjBase.cpp */,
+				B03C1D4F130EDBCB00661BC0 /* Static.cpp */,
+				B0CC327B1344DD56005A0878 /* Component.cpp */,
+				B0CC327D1344DD56005A0878 /* Property.cpp */,
+				B0CC327C1344DD56005A0878 /* Parameter.cpp */,
+				B0CC327E1344DD56005A0878 /* Value.cpp */,
+				B0E82D31134883B0001F77A5 /* Constants.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		19C28FB4FE9D528D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96CA4E610907E8CC00C234AA /* libical.u_xcomp */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96D631340905093100E0F291 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				B0F8CEC9137035F900415EF2 /* Platform */,
+				B0CD06CA135C9D800094CBAF /* Types */,
+				B098CA8B1344CD1D00D5AA78 /* libical */,
+				B0288DF11344BBEA00C4B3EF /* libical.he */,
+				B0A46051125F5517003A3050 /* OmnisTools.he */,
+				B0A7BBEA134F382B0054C250 /* iCalTools.he */,
+				B02360CF11765D3A001236FE /* NVObjBase.he */,
+				B03C1D40130EDAE500661BC0 /* Static.he */,
+				B0CC32731344DD1A005A0878 /* Component.he */,
+				B0CC32751344DD1A005A0878 /* Property.he */,
+				B0CC32741344DD1A005A0878 /* Parameter.he */,
+				B0CC32761344DD1A005A0878 /* Value.he */,
+				B0E82D33134883BA001F77A5 /* Constants.he */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		B098CA8B1344CD1D00D5AA78 /* libical */ = {
+			isa = PBXGroup;
+			children = (
+				B0E82D3513488408001F77A5 /* ical.h */,
+				B0E82D3613488408001F77A5 /* icalarray.h */,
+				B0E82D3713488408001F77A5 /* icalattach.h */,
+				B0E82D3813488408001F77A5 /* icalcalendar.h */,
+				B0E82D3913488408001F77A5 /* icalclassify.h */,
+				B0E82D3A13488408001F77A5 /* icalcluster.h */,
+				B0E82D3B13488408001F77A5 /* icalcomponent.h */,
+				B0E82D3C13488408001F77A5 /* icalderivedparameter.h */,
+				B0E82D3D13488408001F77A5 /* icalderivedproperty.h */,
+				B0E82D3E13488408001F77A5 /* icalderivedvalue.h */,
+				B0E82D3F13488408001F77A5 /* icaldirset.h */,
+				B0E82D4013488408001F77A5 /* icaldirsetimpl.h */,
+				B0E82D4113488408001F77A5 /* icalduration.h */,
+				B0E82D4213488408001F77A5 /* icalenums.h */,
+				B0E82D4313488408001F77A5 /* icalerror.h */,
+				B0E82D4413488408001F77A5 /* icalfileset.h */,
+				B0E82D4513488408001F77A5 /* icalfilesetimpl.h */,
+				B0E82D4613488408001F77A5 /* icalgauge.h */,
+				B0E82D4713488408001F77A5 /* icalgaugeimpl.h */,
+				B0E82D4813488408001F77A5 /* icallangbind.h */,
+				B0E82D4913488408001F77A5 /* icalmemory.h */,
+				B0E82D4A13488408001F77A5 /* icalmessage.h */,
+				B0E82D4B13488408001F77A5 /* icalmime.h */,
+				B0E82D4C13488408001F77A5 /* icalparameter.h */,
+				B0E82D4D13488408001F77A5 /* icalparser.h */,
+				B0E82D4E13488408001F77A5 /* icalperiod.h */,
+				B0E82D4F13488408001F77A5 /* icalproperty.h */,
+				B0E82D5013488408001F77A5 /* icalrecur.h */,
+				B0E82D5113488408001F77A5 /* icalrestriction.h */,
+				B0E82D5213488408001F77A5 /* icalset.h */,
+				B0E82D5313488408001F77A5 /* icalspanlist.h */,
+				B0E82D5413488408001F77A5 /* icalss.h */,
+				B0E82D5513488408001F77A5 /* icalssyacc.h */,
+				B0E82D5613488408001F77A5 /* icaltime.h */,
+				B0E82D5713488408001F77A5 /* icaltimezone.h */,
+				B0E82D5813488408001F77A5 /* icaltypes.h */,
+				B0E82D5913488408001F77A5 /* icaltz-util.h */,
+				B0E82D5A13488408001F77A5 /* icalvalue.h */,
+				B0E82D5B13488408001F77A5 /* icalvcal.h */,
+				B0E82D5C13488408001F77A5 /* port.h */,
+				B0E82D5D13488408001F77A5 /* pvl.h */,
+				B0E82D5E13488408001F77A5 /* sspm.h */,
+				B0E82D5F13488408001F77A5 /* vcaltmp.h */,
+				B0E82D6013488408001F77A5 /* vcc.h */,
+				B0E82D6113488408001F77A5 /* vobject.h */,
+			);
+			name = libical;
+			sourceTree = "<group>";
+		};
+		B0CD06CA135C9D800094CBAF /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				B014512F135C85C300A79E93 /* Attach.he */,
+				B0145130135C85C300A79E93 /* Date.he */,
+				B0145131135C85C300A79E93 /* DateTimePeriod.he */,
+				B0145132135C85C300A79E93 /* Duration.he */,
+				B0145133135C85C300A79E93 /* Geo.he */,
+				B0145134135C85C300A79E93 /* Period.he */,
+				B0145135135C85C300A79E93 /* Recurrence.he */,
+				B0145136135C85C300A79E93 /* TimeSpan.he */,
+				B0145137135C85C300A79E93 /* TimeZone.he */,
+				B0145138135C85C300A79E93 /* TimeZonePhase.he */,
+				B0145139135C85C300A79E93 /* Trigger.he */,
+			);
+			name = Types;
+			sourceTree = "<group>";
+		};
+		B0CD06CB135C9D920094CBAF /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				B0145146135C865400A79E93 /* Attach.cpp */,
+				B0145147135C865400A79E93 /* Date.cpp */,
+				B0145148135C865400A79E93 /* DateTimePeriod.cpp */,
+				B0145149135C865400A79E93 /* Duration.cpp */,
+				B014514A135C865400A79E93 /* Geo.cpp */,
+				B014514B135C865400A79E93 /* Period.cpp */,
+				B014514C135C865400A79E93 /* Recurrence.cpp */,
+				B014514D135C865400A79E93 /* TimeSpan.cpp */,
+				B014514E135C865400A79E93 /* TimeZone.cpp */,
+				B014514F135C865400A79E93 /* TimeZonePhase.cpp */,
+				B0145150135C865400A79E93 /* Trigger.cpp */,
+			);
+			name = Types;
+			sourceTree = "<group>";
+		};
+		B0F8CEC6137035D900415EF2 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				B0F8CECB1370364C00415EF2 /* SystemDate.mm */,
+			);
+			name = Platform;
+			sourceTree = "<group>";
+		};
+		B0F8CEC9137035F900415EF2 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				B0D03B921370450900AB77B7 /* SystemDate.h */,
+			);
+			name = Platform;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96CA4E530907E8CC00C234AA /* UnicodeCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CA4E5D0907E8CC00C234AA /* Build configuration list for PBXNativeTarget "UnicodeCore" */;
+			buildPhases = (
+				96CA4E540907E8CC00C234AA /* Resources */,
+				96CA4E570907E8CC00C234AA /* Sources */,
+				96CA4E590907E8CC00C234AA /* Frameworks */,
+			);
+			buildRules = (
+				96CA4E5C0907E8CC00C234AA /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = UnicodeCore;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = xrandom;
+			productReference = 96CA4E610907E8CC00C234AA /* libical.u_xcomp */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 96CF455E08FBABD1003AA3FE /* Build configuration list for PBXProject "libical" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				english,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* xrandom */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96CA4E530907E8CC00C234AA /* UnicodeCore */,
+				96D355F20908DD62006B6436 /* ReleaseBuild */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96CA4E540907E8CC00C234AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B009C302134A273300C6C5FD /* libical.rc in Resources */,
+				96CA4E550907E8CC00C234AA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96CA4E570907E8CC00C234AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B02360CC11765D30001236FE /* NVObjBase.cpp in Sources */,
+				B0A46050125F550F003A3050 /* OmnisTools.cpp in Sources */,
+				B03C1D50130EDBCB00661BC0 /* Static.cpp in Sources */,
+				B0288DF41344BBF400C4B3EF /* libical.cpp in Sources */,
+				B0CC327F1344DD56005A0878 /* Component.cpp in Sources */,
+				B0CC32801344DD56005A0878 /* Parameter.cpp in Sources */,
+				B0CC32811344DD56005A0878 /* Property.cpp in Sources */,
+				B0CC32821344DD56005A0878 /* Value.cpp in Sources */,
+				B0E82D32134883B0001F77A5 /* Constants.cpp in Sources */,
+				B0A7BBEE134F383F0054C250 /* iCalTools.cpp in Sources */,
+				B0145151135C865400A79E93 /* Attach.cpp in Sources */,
+				B0145152135C865400A79E93 /* Date.cpp in Sources */,
+				B0145153135C865400A79E93 /* DateTimePeriod.cpp in Sources */,
+				B0145154135C865400A79E93 /* Duration.cpp in Sources */,
+				B0145155135C865400A79E93 /* Geo.cpp in Sources */,
+				B0145156135C865400A79E93 /* Period.cpp in Sources */,
+				B0145157135C865400A79E93 /* Recurrence.cpp in Sources */,
+				B0145158135C865400A79E93 /* TimeSpan.cpp in Sources */,
+				B0145159135C865400A79E93 /* TimeZone.cpp in Sources */,
+				B014515A135C865400A79E93 /* TimeZonePhase.cpp in Sources */,
+				B014515B135C865400A79E93 /* Trigger.cpp in Sources */,
+				B0F8CECC1370364C00415EF2 /* SystemDate.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9658838409BC64BB0063770F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96CA4E530907E8CC00C234AA /* UnicodeCore */;
+			targetProxy = 9658838309BC64BB0063770F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96CA4E5E0907E8CC00C234AA /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+			};
+			name = Development;
+		};
+		96CA4E5F0907E8CC00C234AA /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+			};
+			name = Deployment;
+		};
+		96CF455F08FBABD1003AA3FE /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(OMNIS_XCOMP_PATH)";
+				FRAMEWORK_SEARCH_PATHS = "$(OMNIS_LIB_PATH)/complib";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(OMNIS_LIB_PATH)/complib/u_complib.framework/Headers/carbnuni.h";
+				GCC_VERSION = 4.2;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					$PROJECT_DIR/../../include,
+					/Developer/Headers/FlatCarbon,
+					"$(OMNIS_LIB_PATH)/complib/u_complib.framework/Headers",
+					"$(BOOST_ROOT)",
+					$PROJECT_DIR/../../platform/Mac,
+				);
+				INFOPLIST_FILE = $PROJECT_DIR/Info.plist;
+				INSTALL_PATH = /;
+				LIBRARY_SEARCH_PATHS = (
+					"$(BOOST_ROOT)/stage/lib",
+					"$(PROJECT_DIR)/../../lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				OTHER_CFLAGS = (
+					"-Dismach_o",
+					"-Dismach-o",
+				);
+				PRODUCT_NAME = libical;
+				REZ_SEARCH_PATHS = (
+					$PROJECT_DIR/../../resource,
+					/Developer/Headers/FlatCarbon,
+					$PROJECT_DIR/English.lproj,
+				);
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+				VALID_ARCHS = "i386 ppc";
+				WRAPPER_EXTENSION = u_xcomp;
+			};
+			name = Development;
+		};
+		96CF456008FBABD1003AA3FE /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+				);
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(PROJECT_DIR)/../../deploy/Mac";
+				FRAMEWORK_SEARCH_PATHS = "$(OMNIS_LIB_PATH)/complib";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(OMNIS_LIB_PATH)/complib/u_complib.framework/Headers/carbnuni.h";
+				GCC_VERSION = 4.2;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					$PROJECT_DIR/../../include,
+					/Developer/Headers/FlatCarbon,
+					"$(OMNIS_LIB_PATH)/complib/u_complib.framework/Headers",
+					"$(BOOST_ROOT)",
+					$PROJECT_DIR/../../platform/Mac,
+				);
+				INFOPLIST_FILE = $PROJECT_DIR/Info.plist;
+				INSTALL_PATH = /;
+				LIBRARY_SEARCH_PATHS = (
+					"$(BOOST_ROOT)/stage/lib",
+					"$(PROJECT_DIR)/../../lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				OTHER_CFLAGS = (
+					"-Dismach_o",
+					"-Dismach-o",
+				);
+				PRODUCT_NAME = libical;
+				REZ_SEARCH_PATHS = (
+					$PROJECT_DIR/../../resource,
+					/Developer/Headers/FlatCarbon,
+					$PROJECT_DIR/English.lproj,
+				);
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+				VALID_ARCHS = "i386 ppc";
+				WRAPPER_EXTENSION = u_xcomp;
+			};
+			name = Deployment;
+		};
+		96D355F40908DD80006B6436 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		96D355F50908DD80006B6436 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96CA4E5D0907E8CC00C234AA /* Build configuration list for PBXNativeTarget "UnicodeCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CA4E5E0907E8CC00C234AA /* Development */,
+				96CA4E5F0907E8CC00C234AA /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Deployment;
+		};
+		96CF455E08FBABD1003AA3FE /* Build configuration list for PBXProject "libical" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CF455F08FBABD1003AA3FE /* Development */,
+				96CF456008FBABD1003AA3FE /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Deployment;
+		};
+		96D355F30908DD80006B6436 /* Build configuration list for PBXAggregateTarget "ReleaseBuild" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96D355F40908DD80006B6436 /* Development */,
+				96D355F50908DD80006B6436 /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Deployment;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

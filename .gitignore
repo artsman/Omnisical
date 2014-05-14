@@ -1,0 +1,34 @@
+# Build Directory
+proj/Mac/*.xcodeproj/xcuserdata/*
+proj/Mac/*.xcodeproj/*.xcworkspace/xcuserdata/*
+proj/Windows/build/*
+proj/Windows/build/debug/*
+deploy/*
+
+*.pbxuser
+*.mode1v3
+*.user
+
+# Mac OS
+.DS_Store
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.exp
+*.lib
+*.obj
+*.res
+*.dep
+*.idb
+*.pdb
+*.manifest
+*.pdb
+*.res
+*.aps
+*.ncb
+
+# Compiled Dynamic libraries
+*.xcomp
+*.u_xcomp
